@@ -5,55 +5,63 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency converter</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-    <nav class="nav-bar">
-        <img class="bank-logo-img" src="./assets/images/logo.svg" alt="Bank logo">
-        <a class="bank-page-link" href="#"> BANK </a>
-        <a class="business-page-link" href="#"> BUSINESS </a>
-        <a class="investments-page-link" href="#"> INVESTMENTS </a>
-        <a class="insurance-page-link" href="#"> INSURANCE </a>
-        <a class="mobile-page-link" href="#"> MOBILE </a>
-        <a class="trips-page-link" href="#"> TRIPS </a>
-        <a class="entertainment-page-link" href="#"> ENTERTAINMENT </a>
-        <a class="login-page-link" href="#"> LOGIN </a>
-    </nav>
+    <header>
+        <a href="#"><img class="bank-logo-img" src="./assets/images/logo.svg" alt="Bank logo"></a>
+        <nav class="page-links-container">
+            <a class="this-page bank-page-link" href="#"> BANK </a>
+            <a class="business-page-link" href="#"> BUSINESS </a>
+            <a class="investments-page-link" href="#"> INVESTMENTS </a>
+            <a class="insurance-page-link" href="#"> INSURANCE </a>
+            <a class="mobile-page-link" href="#"> MOBILE </a>
+            <a class="trips-page-link" href="#"> TRIPS </a>
+            <a class="entertainment-page-link" href="#"> ENTERTAINMENT </a>
+        </nav>
+        <a class="login-link" href="#"> LOGIN </a>
+    </header>
 
     <main>
         <h1> Online currency converter </h1>
+        <div class="main-container">
+            <div class="currency-input-container">
+                <p class="selection-label"> I have </p>
+                <div class="currency-selection">
+                    <span class="rub"> RUB </span>
+                    <span class="usd"> USD </span>
+                    <span class="eur"> EUR </span>
+                    <span class="gbd"> GBD </span>
+                </div>
 
-        <div class="currency-input-container">
-            <p class="selection-label"> I have </p>
-            <div class="currency-selection">
-                <span class="rub"> RUB </span>
-                <span class="usd"> USD </span>
-                <span class="eur"> EUR </span>
-                <span class="gbd"> GBD </span>
+                <div class="input-box">
+                    <input type="text" placeholder="5000">
+                    <p class="conversion-detail"> 1 RUB = 0.0135 USD </p>
+                </div>
             </div>
 
-            <div class="input-box">
-                <input type="text" placeholder="5000">
-                <p class="conversion-detail"> 1 RUB = 0.0135 USD </p>
+            <div class="currency-input-container">
+                <p class="selection-label"> I want to buy </p>
+                <div class="currency-selection">
+                    <span class="rub"> RUB </span>
+                    <span class="usd"> USD </span>
+                    <span class="eur"> EUR </span>
+                    <span class="gbd"> GBD </span>
+                </div>
+
+                <div class="input-box">
+                    <input type="text" placeholder="67.6685">
+                    <p class="conversion-detail"> 1 USD = 73.8896 RUB </p>
+                </div>
             </div>
         </div>
-
-        <div class="currency-input-container">
-            <p class="selection-label"> I want to buy </p>
-            <div class="currency-selection">
-                <span class="rub"> RUB </span>
-                <span class="usd"> USD </span>
-                <span class="eur"> EUR </span>
-                <span class="gbd"> GBD </span>
-            </div>
-
-            <div class="input-box">
-                <input type="text" placeholder="67.6685">
-                <p class="conversion-detail"> 1 USD = 73.8896 RUB </p>
-            </div>
+        <div class="connection-error-container">
+            <img class="connection-error-image" src="./assets/images/network-error.svg" alt="connection error image">
+            <p class="connection-error-message">No internet connection. Trying to reconnect...</p>
         </div>
     </main>
-
+    <script src="./index.js"></script>
 </body>
 
 </html>
